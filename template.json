@@ -1,0 +1,2 @@
+New-AzureRmResource -ResourceGroupName <ResourceGroupName> -Location <Location> -ResourceType microsoft.web/serverfarms -ResourceName <YourPlanName> -kind linux -Properties @{reserved="true"} -Sku @{name="S1";tier="Standard"; size="S1"; family="S"; capacity="1"} -Force
+New-AzureRmWebApp -ResourceGroupName <ResourceGroupName> -Name <YourAppName> -AppServicePlan <YourPlanName>
